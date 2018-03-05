@@ -53,8 +53,8 @@ Resources:
     Condition: CreateResources
     Properties:
       Code:
-        S3Bucket: infascination-public-oregon
-        S3Key: auto-tagging.zip
+        S3Bucket: 'infascination-public-oregon'
+        S3Key: 'auto-tagging.zip'
       Description: This function tags EC2 Resources in response to Cloudwatch Events.
       Handler: index.lambda_handler
       Role: !GetAtt 'LambdaAutoTagRole.Arn'
@@ -132,4 +132,4 @@ Resources:
             Resource:
               - '*'
       Groups:
-        - !Ref 'ManageEC2InstancesGroup
+        - !Ref 'ManageEC2InstancesGroup'
